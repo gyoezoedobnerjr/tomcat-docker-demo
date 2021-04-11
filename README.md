@@ -15,28 +15,28 @@ If you have a working installation of Docker running on you system and a working
 Internet connection, you can build a Docker image from this repo by running the
 following:
 
-docker build -t <image-name-of-your-choice> .
+docker build -t &lt;image-name-of-your-choice&gt; .
 
-in this directory at a command prompt. Replace '<image-name-of-your-choice>'
+in this directory at a command prompt. Replace '&lt;image-name-of-your-choice&gt;'
 with whatever you want to name the resulting image. (Don't forget the '.' at
 the end of the command!)
 
-Careful! You do not need the '<>' signs in the name you choose!
+Careful! You do not need the '&lt;&gt;' signs in the name you choose!
 
 After the image is successfully built, you can launch a container generated
 from the image by running the following at a command prompt anywhere on your
 system:
 
-docker run -dp 8080:8080 --name <container-name-of-your-choice> <image-name-of-your-choice>
+docker run -dp 8080:8080 --name &lt;container-name-of-your-choice&gt; &lt;image-name-of-your-choice&gt;
 
-Replace '<image-name-of-your-choice>' with whatever you used in the command to build the
-image, and '<container-name-of-your-choice>' with whatever you want to name the resulting
+Replace '&lt;image-name-of-your-choice&gt;' with whatever you used in the command to build the
+image, and '&lt;container-name-of-your-choice&gt;' with whatever you want to name the resulting
 container.
 
 If the port '8080' is already in use on your system, you can select a different port
 to use by changing the number to the left of the colon in the command e.g. like this:
 
-docker run -dp 8085:8080 --name <container-name-of-your-choice> <image-name-of-your-choice>
+docker run -dp 8085:8080 --name &lt;container-name-of-your-choice&gt; &lt;image-name-of-your-choice&gt;
 
 After the container is successfully launched, you can view the test webapp running in it
 by entering 'localhost:your-chosen-port' in the address bar of your web browser e.g. like
