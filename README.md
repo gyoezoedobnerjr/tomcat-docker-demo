@@ -1,11 +1,17 @@
 # Tomcat Docker Demo
-This project runs the Tomcat sample webapp
-( https://tomcat.apache.org/tomcat-9.0-doc/appdev/sample/sample.war )
-using a Tomcat installation inside a Docker container. I'm not sure about the licensing
-implications of keeping the webapp inside this repo, so the build process will download
-it directly from the Tomcat web site, which means this version of the demo will only work
-as long as the webapp remains available from there. Hopefully, I will be able to find (or
-better yet: write) something to replace it with before it disappears.
+Instead of the Tomcat sample webapp, the current version of this demo project runs the latest
+version of Jenkins at the time of writing
+( https://github.com/jenkinsci/jenkins/releases/download/jenkins-2.287/jenkins.war )
+using a Tomcat installation inside a Docker container.
+
+Although Jenkins is also released under the MIT license, the 'jenkins.war' file I'm using doesn't
+seem to have a copy of the version of the MIT license the Jenkins project uses, so I opted for
+directly downloading it during the build process. This means that this version of the demo will
+only work as long as the file remains available from the link used. Hopefully, I will be able to
+write something myself to replace it with before it disappears.
+
+This is just a demo. For production use, you will probably want to go with e.g.
+https://github.com/jenkinsci/docker instead.
 
 ## Required Software
 Docker ( https://docs.docker.com/get-docker/ )
@@ -45,4 +51,4 @@ this:
 localhost:8085
 
 ## Miscellaneous
-I may later replace the webapp with something more interesting.
+One day I hope I will be able to write a webapp myself to use in this demo.
